@@ -1,0 +1,32 @@
+form {
+    position:relative;
+}
+[type=checkbox] {
+    opacity:0;
+}
+.fakeCheckBox {
+    position:absolute;
+    width:10px;
+    height:10px;
+    top:3px;
+    left:4px;
+    border:2px inset;
+    background:#fff;
+    z-index:-1;
+}
+.fakeCheckBox:before {
+    content:"";
+    position:absolute;
+    width:0;
+    height:0;
+    -webkit-transform: rotate(-45deg);
+    transform:rotate(-45deg);
+    transition:height .2s ease, width .3s .1s ease;
+}
+.checked:before {
+    width:10px;
+    height:5px;
+    border:2px solid;
+    border-top:none;
+    border-right:none;
+}
