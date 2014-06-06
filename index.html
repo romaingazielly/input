@@ -2,15 +2,43 @@
 <html>
     <head>
         <title>Form Input</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="jquery.js"></script>
         <script type="text/javascript" src="script.js"></script>
     </head>
 
     <body>
-       <form action="traitement.php">
-            <input type="checkbox" id="conditions" />
-            <span class="fakeCheckBox" data-id="conditions" ></span>
-            <label for="conditions">J'accepte les <a href="http://www.google.fr">conditions d'utilisation</a> du service</label>
-        </form>
+        <!-- Checkboxs -->
+        <span class="checkbox" id="check_newsletter">
+            <input type="checkbox" id="user_newsletter" />
+            <span class="fakeCheckbox" data-id="user_newsletter"></span>
+            <label for="user_newsletter">J'accepte de recevoir des infos de la newsletter</label>
+        </span>
+        <span class="checkbox" id="check_conditions">
+            <input type="checkbox" id="user_conditions" />
+            <span class="fakeCheckbox" data-id="user_conditions"></span>
+            <label for="user_conditions">J'accepte le <a href="http://romaingazielly.com" class="reglement-link">règlement du jeu</a> *</label>
+        </span>
+
+        <!-- Radio -->
+        <div>
+            <p>Clic sur un élément :</p>
+            <div class="radio first">
+                <input type="radio" id="answer_a" name="answer" value="a" checked />
+                <span class="fakeRadio checked" data-id="answer_a"></span>
+                <label for="answer_a">Réponse A</label>
+            </div>
+            <div class="radio">
+                <input type="radio" id="answer_b" name="answer" value="b" />
+                <span class="fakeRadio" data-id="answer_b"></span>
+                <label for="answer_b">Réponse B</label>
+            </div>
+            <div class="radio last">
+                <input type="radio" id="answer_c" name="answer" value="c" /> 
+                <span class="fakeRadio" data-id="answer_c"></span>
+                <label for="answer_c">Réponse C</label>
+            </div>
+        </div>
     </body>
 </html>

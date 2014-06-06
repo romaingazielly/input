@@ -1,32 +1,14 @@
-form {
-    position:relative;
-}
-[type=checkbox] {
-    opacity:0;
-}
-.fakeCheckBox {
-    position:absolute;
-    width:10px;
-    height:10px;
-    top:3px;
-    left:4px;
-    border:2px inset;
-    background:#fff;
-    z-index:-1;
-}
-.fakeCheckBox:before {
-    content:"";
-    position:absolute;
-    width:0;
-    height:0;
-    -webkit-transform: rotate(-45deg);
-    transform:rotate(-45deg);
-    transition:height .2s ease, width .3s .1s ease;
-}
-.checked:before {
-    width:10px;
-    height:5px;
-    border:2px solid;
-    border-top:none;
-    border-right:none;
-}
+
+/* Checkbox */
+[type="checkbox"] { opacity:0; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; position:relative; z-index:1000000;}
+#check_newsletter, #check_conditions { position:relative; display:block; }
+.fakeCheckbox {position:absolute;width:24px;height:23px;top:0px;left: 0px;background:url('checkbox.png') no-repeat right; cursor:pointer; }
+.checked {background-position:left;}
+label { margin-left:15px; height: 24px; line-height: 24px; display: inline-block;}
+#check_conditions a { color:#000; text-decoration:underline; }
+
+/* Radio */
+[type="radio"] {opacity:0; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";}
+.radio { position:relative;display: inline-block; width: auto; margin: 0 20px 20px; font-family: 'ProximaNova'; font-size: 24px; color: #000;}
+.radio .fakeRadio {position:absolute;width:17px;height:14px;top:9px;left: 0px;background:url('radio.png') no-repeat right; cursor:pointer; }
+.radio .checked {background-position:left;}
